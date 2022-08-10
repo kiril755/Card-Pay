@@ -1,0 +1,190 @@
+.main {
+  background-color: #e8e8e8;
+  padding: 30px;
+  width: 100vw;
+}
+
+.main__button-list {
+  margin-bottom: 30px;
+}
+
+.main__button {
+  font-weight: 700;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.copy__btn {
+  font-size: 18px;
+  color: #fff;
+  position: relative;
+  left: 265px;
+  bottom: -90px;
+  background-color: inherit;
+
+  cursor: pointer;
+
+  &:hover,
+  :focus {
+    color: #0085c6;
+  }
+}
+
+.card__wrap {
+  display: flex;
+}
+
+.card {
+  color: #e3e3e3;
+  display: block;
+  margin-right: 30px;
+
+  text-align: center;
+
+  h1 {
+    font-size: 60px;
+    font-weight: normal;
+  }
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+.card__delete-btn {
+  height: 30px;
+}
+
+/*
+ * The Card
+ *
+ * ==================== */
+.cc,
+.cc-back {
+  //background: linear-gradient(to left, #70257b, #8a2c94);
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  display: block;
+  height: 195px;
+  letter-spacing: 0.1rem;
+
+  position: relative;
+  text-align: left;
+  text-transform: uppercase;
+  width: 325px;
+}
+
+.chip {
+  background: #efb77f;
+  border-radius: 5px;
+  display: block;
+  height: 30px;
+  left: 30px;
+  position: absolute;
+  top: 50px;
+  width: 40px;
+}
+
+.cc-number {
+  color: #fff;
+  bottom: 75px;
+  font-size: 20px;
+  left: 18px;
+  position: absolute;
+}
+
+.cc-date {
+  color: #fff;
+  bottom: 40px;
+  left: 30px;
+  position: absolute;
+}
+
+.cc-date.expiry {
+  left: 30px;
+}
+
+.cc-date.expiry:after {
+  color: #fff;
+  content: "Valid thru";
+  font-size: 8px;
+  left: 0;
+  position: absolute;
+  text-transform: none;
+  top: -10px;
+  white-space: nowrap;
+}
+
+.cc-name {
+  color: #fff;
+  bottom: 15px;
+  left: 30px;
+  position: absolute;
+}
+
+/*
+ * MasterCard logo in pure CSS in just ONE element
+ * by Jaime Caballero (jaicab.com)
+ */
+
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans:700);
+
+$mcd-red: #cd0001;
+$mcd-orange: #fe9900;
+$cirrus-dark-blue: #345399;
+$cirrus-light-blue: #0085c6;
+
+$mcd-width: 5rem;
+$mcd-height: $mcd-width * 3/5;
+
+.mastercard {
+  font-family: "Droid Sans", Helvetica, sans-serif;
+  position: absolute;
+  width: $mcd-width;
+
+  font-size: 12px;
+  line-height: $mcd-height;
+  letter-spacing: -$mcd-width/75;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  color: white;
+  text-shadow: -$mcd-height/75 $mcd-height/75 0 #16226a;
+  text-transform: none;
+  top: 39px;
+  right: 30px;
+
+  z-index: 2;
+
+  //Circles here
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+    border-radius: 50%;
+    width: $mcd-height;
+    height: $mcd-height;
+    z-index: -1;
+
+    //Gradient
+    background: linear-gradient($mcd-orange 50%, $mcd-red 50%);
+    background-size: $mcd-height/8 $mcd-height/8;
+
+    //A shadow for the red one (inset) and another for the orange one
+    box-shadow: ($mcd-width - $mcd-height) 0 0 0 $mcd-orange,
+      ($mcd-width - $mcd-height) 0 0 0 $mcd-red inset;
+  }
+
+  //Registered trademark
+  &::after {
+    content: "\00ae";
+    padding-left: 0.5em;
+
+    font: 0.25em Helvetica, sans-serif lighter normal;
+    text-shadow: none;
+  }
+}

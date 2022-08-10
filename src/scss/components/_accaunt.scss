@@ -1,0 +1,31 @@
+.accaunt {
+  background-color: #f5f5f5;
+
+  padding: 30px;
+  min-width: 465px;
+
+  ul:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  ul:not(:first-child) {
+    margin-left: 20px;
+  }
+}
+
+.cash__wrap {
+  display: flex;
+  align-items: center;
+}
+
+.cash__item {
+  margin-right: 30px;
+}
+
+.cards__wrap {
+  display: flex;
+  align-items: center;
+}
+
+.cards__item {
+  margin-right: 30px;
+}
